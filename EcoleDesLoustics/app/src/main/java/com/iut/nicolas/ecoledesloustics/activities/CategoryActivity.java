@@ -55,10 +55,8 @@ public class CategoryActivity extends AppCompatActivity {
 
     private void updateListCategories()
     {
-        //RECUPERATION PAR LA BDD DES STUDENTS INSCRITS
-        List<Category> mListCategories = Category.listAll(Category.class);
         //GESTION DE LA LISTE DES USERS
-        CategoryAdapter adapter = new CategoryAdapter(CategoryActivity.this,mListCategories);
+        CategoryAdapter adapter = new CategoryAdapter(CategoryActivity.this,StudentContext.getInstance().getExercises().categories);
         mListViewCategories.setAdapter(adapter);
 
     }

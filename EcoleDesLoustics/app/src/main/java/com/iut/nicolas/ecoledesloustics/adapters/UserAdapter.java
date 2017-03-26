@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.iut.nicolas.ecoledesloustics.R;
 import com.iut.nicolas.ecoledesloustics.holders.UserViewHolder;
-import com.iut.nicolas.ecoledesloustics.models.Student;
+import com.iut.nicolas.ecoledesloustics.models.db.Student;
 
 import java.util.List;
 

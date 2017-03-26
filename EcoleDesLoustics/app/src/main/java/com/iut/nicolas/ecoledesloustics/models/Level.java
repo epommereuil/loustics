@@ -1,15 +1,13 @@
 package com.iut.nicolas.ecoledesloustics.models;
 
-import com.orm.SugarRecord;
+import java.util.ArrayList;
 
 /**
- * Created by eric on 25/03/2017.
+ * Created by Eric Pommereuil on 26/03/2017.
  */
-public class Level extends SugarRecord {
-    Student student;
-    Category category;
 
-    public Level()
-    {
-    }
+public class Level {
+    public Integer level;
+    public String name;
+    public ArrayList<Exercise> exercises;
 }

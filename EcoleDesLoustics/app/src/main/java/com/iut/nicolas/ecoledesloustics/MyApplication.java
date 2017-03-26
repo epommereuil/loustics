@@ -1,11 +1,15 @@
 package com.iut.nicolas.ecoledesloustics;
 
 import android.app.Application;
-import android.os.Bundle;
+import android.util.Log;
 
-import com.iut.nicolas.ecoledesloustics.models.Category;
+import com.google.gson.GsonBuilder;
+import com.iut.nicolas.ecoledesloustics.models.Exercises;
 import com.iut.nicolas.ecoledesloustics.models.StudentContext;
 import com.orm.SugarContext;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by eric on 25/03/2017.
@@ -24,23 +28,24 @@ public class MyApplication extends Application
 
     public void init()
     {
-        if(Category.find(Category.class,"id_category = ?",StudentContext.IDMath).size()==0)
-        {
-            Category category = new Category(StudentContext.IDMath,"Mathématique");
-            category.save();
-        }
-
-        if(Category.find(Category.class,"id_category = ?",StudentContext.IDGeo).size()==0)
-        {
-            Category category = new Category(StudentContext.IDGeo,"Géographie");
-            category.save();
-        }
-
-        if(Category.find(Category.class,"id_category = ?", StudentContext.IDFrancais).size()==0)
-        {
-            Category category = new Category(StudentContext.IDFrancais,"Francais");
-            category.save();
-        }
+        String json = loadJSONFromAsset("exercises.json");
+        StudentContext.getInstance().setExercises(new GsonBuilder().create().fromJson(json, Exercises.class));
+        Log.d("toto","");
     }
 
+    private String loadJSONFromAsset(String name) {
+        String json = null;
+        try {
+            InputStream is = getAssets().open(name);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
 }

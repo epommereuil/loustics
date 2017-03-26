@@ -5,15 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.iut.nicolas.ecoledesloustics.R;
 import com.iut.nicolas.ecoledesloustics.adapters.UserAdapter;
-import com.iut.nicolas.ecoledesloustics.holders.UserViewHolder;
-import com.iut.nicolas.ecoledesloustics.models.Student;
+import com.iut.nicolas.ecoledesloustics.models.db.Student;
 import com.iut.nicolas.ecoledesloustics.models.StudentContext;
 
 import java.util.List;

@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.iut.nicolas.ecoledesloustics.R;
-import com.iut.nicolas.ecoledesloustics.models.Student;
+import com.iut.nicolas.ecoledesloustics.models.db.Student;
 
 /**
  * Created by eric on 25/03/2017.

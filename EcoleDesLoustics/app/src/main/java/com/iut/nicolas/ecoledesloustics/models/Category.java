@@ -1,23 +1,15 @@
 package com.iut.nicolas.ecoledesloustics.models;
 
-import com.orm.SugarRecord;
+import java.util.ArrayList;
 
 /**
- * Created by eric on 25/03/2017.
+ * Created by Eric Pommereuil on 26/03/2017.
  */
-public class Category extends SugarRecord {
-    private String idCategory;
-    private String name;
 
-    public Category()
-    {
-    }
-
-    public Category(String id,String name)
-    {
-        this.idCategory = id;
-        this.name = name;
-    }
+public class Category {
+    public String id;
+    public String name;
+    public ArrayList<Level> levels;
 
     public String getName()
     {
