@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/holderAvatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:background="#AAA"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/holderFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="4dp"
+        android:text="POMMEREUIL"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/holderAvatar"
+        app:layout_constraintTop_toTopOf="@+id/holderAvatar" />
+
+    <TextView
+        android:id="@+id/holderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:text="Nicolas"
+        app:layout_constraintLeft_toRightOf="@+id/holderFirstName"
+        app:layout_constraintTop_toTopOf="@+id/holderFirstName" />
+
+    <TextView
+        android:id="@+id/holderAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="8dp"
+        android:text="19 ans"
+        app:layout_constraintBottom_toBottomOf="@+id/holderAvatar"
+        app:layout_constraintLeft_toLeftOf="@+id/holderFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/holderFirstName" />
+
+</android.support.constraint.ConstraintLayout>
