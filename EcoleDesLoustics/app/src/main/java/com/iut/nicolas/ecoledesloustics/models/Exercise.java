@@ -6,8 +6,8 @@ import com.orm.SugarRecord;
  * Created by eric on 25/03/2017.
  */
 public class Exercise extends SugarRecord{
-    String mName;
-    Category mCategory;
+    String name;
+    Category category;
 
     public Exercise()
     {
@@ -16,6 +16,6 @@ public class Exercise extends SugarRecord{
 
     public Exercise(String name)
     {
-        mName = name;
+        this.name = name;
     }
 }

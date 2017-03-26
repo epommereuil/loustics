@@ -6,9 +6,9 @@ import com.orm.SugarRecord;
  * Created by eric on 25/03/2017.
  */
 public class Student extends SugarRecord {
-    private String mName;
-    private String mFirsName;
-    private int mAge;
+    private String name;
+    private String firstname;
+    private int age;
 
     public Student()
     {
@@ -17,31 +17,31 @@ public class Student extends SugarRecord {
     public Student(String name, String firstName, int age)
     {
         setName(name);
-        setFirsName(firstName);
+        setFirstname(firstName);
         setAge(age);
     }
 
     public String getName() {
-        return mName;
+        return name;
     }
 
     public void setName(String mName) {
-        this.mName = mName;
+        this.name = mName;
     }
 
-    public String getFirsName() {
-        return mFirsName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirsName(String mFirsName) {
-        this.mFirsName = mFirsName;
+    public void setFirstname(String mFirsName) {
+        this.firstname = mFirsName;
     }
 
     public int getAge() {
-        return mAge;
+        return age;
     }
 
     public void setAge(int mAge) {
-        this.mAge = mAge;
+        this.age = mAge;
     }
 }

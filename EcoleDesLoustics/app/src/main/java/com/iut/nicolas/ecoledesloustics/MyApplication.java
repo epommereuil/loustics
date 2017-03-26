@@ -24,19 +24,19 @@ public class MyApplication extends Application
 
     public void init()
     {
-        if(Category.find(Category.class,"idCategory = ?",StudentContext.IDMath).size()==0)
+        if(Category.find(Category.class,"id_category = ?",StudentContext.IDMath).size()==0)
         {
             Category category = new Category(StudentContext.IDMath,"Mathématique");
             category.save();
         }
 
-        if(Category.find(Category.class,"idCategory = ?",StudentContext.IDGeo).size()==0)
+        if(Category.find(Category.class,"id_category = ?",StudentContext.IDGeo).size()==0)
         {
             Category category = new Category(StudentContext.IDGeo,"Géographie");
             category.save();
         }
 
-        if(Category.find(Category.class,"idCategory = ?", StudentContext.IDFrancais).size()==0)
+        if(Category.find(Category.class,"id_category = ?", StudentContext.IDFrancais).size()==0)
         {
             Category category = new Category(StudentContext.IDFrancais,"Francais");
             category.save();

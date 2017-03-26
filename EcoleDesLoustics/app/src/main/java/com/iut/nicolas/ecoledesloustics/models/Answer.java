@@ -8,13 +8,13 @@ import org.json.JSONObject;
  * Created by eric on 25/03/2017.
  */
 public class Answer extends SugarRecord{
-    JSONObject mData;
-    Exercise mExercice;
-    Student mStudent;
+    JSONObject data;
+    Exercise exercise;
+    Student student;
 
     public Answer()
     {
-        mData = new JSONObject();
+        data = new JSONObject();
     }
 
 }

@@ -5,14 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.iut.nicolas.ecoledesloustics.R;
 import com.iut.nicolas.ecoledesloustics.adapters.CategoryAdapter;
 import com.iut.nicolas.ecoledesloustics.models.Category;
-import com.iut.nicolas.ecoledesloustics.models.Student;
 import com.iut.nicolas.ecoledesloustics.models.StudentContext;
 
 import java.util.List;
@@ -30,7 +28,7 @@ public class CategoryActivity extends AppCompatActivity {
         mListViewCategories = (ListView) findViewById(R.id.listCategories);
 
         if(StudentContext.getInstance().getCurrentStudent()!=null){
-            mWelcomMessage.setText("Bienvenue "+StudentContext.getInstance().getCurrentStudent().getFirsName()+" !");
+            mWelcomMessage.setText("Bienvenue "+StudentContext.getInstance().getCurrentStudent().getFirstname()+" !");
         }
 
         mListViewCategories.setOnItemClickListener(new AdapterView.OnItemClickListener(){

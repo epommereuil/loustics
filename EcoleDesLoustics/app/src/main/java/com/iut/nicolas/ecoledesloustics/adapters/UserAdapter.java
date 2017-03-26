@@ -47,7 +47,7 @@ public class UserAdapter extends ArrayAdapter<Student>
         //il ne reste plus qu'à remplir notre vue
         userHolder.mAge.setText(Integer.toString(student.getAge()));
         userHolder.mName.setText(student.getName());
-        userHolder.mFirstName.setText(student.getFirsName());
+        userHolder.mFirstName.setText(student.getFirstname());
         userHolder.mAvatar.setImageDrawable(new ColorDrawable(0xffff0000));
 
 
